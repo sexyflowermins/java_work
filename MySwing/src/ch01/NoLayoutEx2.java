@@ -3,15 +3,15 @@ package ch01;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class NoLayoutEx2 extends JFrame{
+public class NoLayoutEx2 extends JFrame {
 
 	JButton[] buttons = new JButton[10];
-	
-	
-	public NoLayoutEx2(){
+
+	public NoLayoutEx2() {
 		initData();
 		setInitLayout();
 	}
+
 	private void initData() {
 		setTitle("혼자해보는 레이아웃없는 좌표형식");
 		setSize(1_000, 1_000);
@@ -37,6 +37,7 @@ public class NoLayoutEx2 extends JFrame{
 		buttons[9] = new JButton("버튼9");
 		buttons[9].setSize(100, 100);
 	}
+
 	private void setInitLayout() {
 		setLayout(null);
 		buttons[0].setLocation(0, 0);
@@ -61,6 +62,7 @@ public class NoLayoutEx2 extends JFrame{
 		add(buttons[9]);
 		setVisible(true);
 	}
+
 	public static void main(String[] args) {
 		new NoLayoutEx2();
 	}

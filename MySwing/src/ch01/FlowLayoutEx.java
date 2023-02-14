@@ -12,14 +12,14 @@ public class FlowLayoutEx extends JFrame {
 	private JButton button1;
 	private JButton button2;
 	private JButton button3;
-	//문제1 버튼 6개를 만들어 화면 출력
+	// 문제1 버튼 6개를 만들어 화면 출력
 	private JButton button4;
 	private JButton button5;
 	private JButton button6;
 
 	public FlowLayoutEx() {
 		// 초기화 값 세팅(메서드를 통해서 역할 분담) 순서도 중요하다
-		initData();//데이터
+		initData();// 데이터
 		setInitLayout();
 	}
 
@@ -37,9 +37,9 @@ public class FlowLayoutEx extends JFrame {
 	}
 
 	public void setInitLayout() {
-		//배치관리자를 설정해보자.
-		//FlowLayout
-		setLayout(new FlowLayout(FlowLayout.LEFT,10,200));
+		// 배치관리자를 설정해보자.
+		// FlowLayout
+		setLayout(new FlowLayout(FlowLayout.LEFT, 10, 200));
 		add(button1);
 		add(button2);
 		add(button3);

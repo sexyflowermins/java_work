@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 public class FlowLayoutEx3 extends JFrame {
 
 	// 배열
-	//8개생성
+	// 8개생성
 	private JButton[] button = new JButton[8];
 
 	public FlowLayoutEx3() {
@@ -22,7 +22,7 @@ public class FlowLayoutEx3 extends JFrame {
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		for (int i = 0; i < button.length; i++) {
-			button[i] = new JButton("button"+(i+1));
+			button[i] = new JButton("button" + (i + 1));
 		}
 	}
 

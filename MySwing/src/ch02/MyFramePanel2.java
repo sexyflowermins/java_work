@@ -53,11 +53,11 @@ public class MyFramePanel2 extends JFrame {
 		panel1.add(button1);
 		panel1.add(button2);
 		panel1.add(button3);
-		panel1.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
+		panel1.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 0));
 		panel2.add(button4);
 		panel2.add(button5);
 		panel2.add(button6);
-		panel2.setLayout(new FlowLayout(FlowLayout.RIGHT,0,0));
+		panel2.setLayout(new FlowLayout(FlowLayout.RIGHT, 0, 0));
 
 		setVisible(true);
 	}
