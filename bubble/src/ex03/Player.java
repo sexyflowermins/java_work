@@ -1,4 +1,4 @@
-package ex02;
+package ex03;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -15,6 +15,10 @@ public class Player extends JLabel implements Moveable {
 	private boolean up;
 	private boolean down;
 
+	// 벽에 충돌한 상태
+	private boolean leftWallCrash;
+	private boolean rightWallCrash;
+
 	// 플레이어의 속도
 	private final int SPEED = 4;
 	private final int JUMPSPEED = 2;
@@ -23,6 +27,7 @@ public class Player extends JLabel implements Moveable {
 		initDate();
 		setInitLayout();
 	}
+	// getter 추가
 
 	// setter 메서드만들기; 오른 쪼 왼쪽
 	public void setLeft(boolean left) {
@@ -33,6 +38,30 @@ public class Player extends JLabel implements Moveable {
 		this.right = right;
 	}
 
+	public boolean isLeftWallCrash() {
+		return leftWallCrash;
+	}
+
+	public void setLeftWallCrash(boolean leftWallCrash) {
+		this.leftWallCrash = leftWallCrash;
+	}
+
+	public boolean isRightWallCrash() {
+		return rightWallCrash;
+	}
+
+	public void setRightWallCrash(boolean rightWallCrash) {
+		this.rightWallCrash = rightWallCrash;
+	}
+
+	public boolean isLeft() {
+		return left;
+	}
+
+	public boolean isRight() {
+		return right;
+	}
+
 	private void initDate() {
 		playerR = new ImageIcon("images/playerR.png");
 		playerL = new ImageIcon("images/playerL.png");
@@ -40,10 +69,12 @@ public class Player extends JLabel implements Moveable {
 		right = false;
 		up = false;
 		down = false;
+		leftWallCrash = false;
+		rightWallCrash = false;
 	}
 
 	private void setInitLayout() {
-		x = 55;
+		x = 500;
 		y = 535;
 		// 좌표기반 ,라벨의 크기 지정해야한다.
 		setSize(50, 50);
@@ -108,7 +139,7 @@ public class Player extends JLabel implements Moveable {
 					y = y - JUMPSPEED;
 					setLocation(x, y);
 					try {
-						Thread.sleep(5);
+						Thread.sleep(10);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -131,13 +162,13 @@ public class Player extends JLabel implements Moveable {
 					y = y + JUMPSPEED;
 					setLocation(x, y);
 					try {
-						Thread.sleep(5);
+						Thread.sleep(10);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				}
 				down = false;
-				//상태값을 다룰 떄는 상황이 변하면 초기화 처리를 잘 해야함 (팁!!)
+				// 상태값을 다룰 떄는 상황이 변하면 초기화 처리를 잘 해야함 (팁!!)
 			}
 		}).start();
 

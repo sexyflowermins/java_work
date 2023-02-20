@@ -71,9 +71,7 @@ public class BubbleFrame extends JFrame {
 					//오른쪽 버튼을 때면 멈춰야해
 					player.setRight(false);
 					break;
-
-				default:
-					break;
+					
 				}
 			}
 		});
