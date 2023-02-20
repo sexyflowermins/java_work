@@ -1,4 +1,4 @@
-package ex03;
+package ex04;
 
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
